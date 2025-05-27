@@ -2,52 +2,49 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@300;400;700&display=swap');
 
 :root {
-    --primary-color: #FF6B6B; /* Rojo Coral original */
-    --secondary-color: #4ECDC4; /* Turquesa original */
-    --accent-color: #FFE66D; /* Amarillo Brillante original */
-    /* Nuevos colores para el fondo general y texto del body */
-    --body-background-color: #F8BBD0; /* Fucsia suave para el fondo del body */
-    --body-text-color: #FFFFFF; /* Letras blancas para el body */
-    --body-text-shadow: 2px 2px 4px #000000; /* Sombra negra para el texto del body */
-
-    /* Tus variables originales que afectaban al body, ahora serán usadas directamente por las secciones */
-    --text-color: #333; /* Color de texto oscuro para elementos sobre fondos claros */
-    --light-text-color: #f4f4f4; /* Color de texto claro para elementos sobre fondos oscuros */
-    --background-light: #f9f9f9; /* Fondo claro general (será sobreescrito por body-background-color para el body) */
-    --background-dark: #333; /* Fondo oscuro general */
+    --primary-color: #FF69B4; /* Fucsia vibrante (HotPink) - Usado para títulos, botones y elementos destacados */
+    --secondary-color: #4ECDC4; /* Turquesa - Para contrastes y elementos secundarios */
+    --accent-color: #FFE66D; /* Amarillo Brillante - Para acentos muy específicos */
+    --text-color: #333; /* Color de texto oscuro para la mayoría de los párrafos */
+    --light-text-color: #f4f4f4; /* Blanco casi puro para el texto sobre fondos oscuros/fucsia */
+    
+    /* --- CAMBIOS PRINCIPALES DE COLOR DE FONDO Y CONTRATE AQUÍ --- */
+    --background-light: #FFB6C1; /* Fucsia suave (LightPink) - Fondo principal de la página */
+    --background-dark: #C71585; /* Púrpura medio (MediumVioletRed) - Para navegación, footer y contrastes oscuros */
+    /* --- FIN CAMBIOS --- */
 }
 
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: var(--body-background-color); /* Fondo fucsia suave */
-    color: var(--body-text-color); /* Letras blancas */
+    background-color: var(--background-light); /* Fondo principal de la página con el fucsia suave */
+    color: var(--text-color);
     line-height: 1.6;
-    text-shadow: var(--body-text-shadow); /* Sombra negra para el texto del body */
 }
 
 /* Encabezado */
 header {
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); /* Tus colores originales */
-    color: var(--light-text-color); /* Texto blanco o muy claro (como lo tenías) */
+    /* Mantenemos el degradado que incorpora primary-color y secondary-color, combinando bien */
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--light-text-color); /* Texto blanco */
     padding: 2.5em 0;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-shadow: 1px 1px 3px #000000; /* Sombra negra para el texto del header */
 }
 
 header h1 {
     font-family: 'Pacifico', cursive;
     font-size: 3.5em;
     margin-bottom: 0.2em;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra más definida para el título */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Sombreado para el texto blanco */
 }
 
 header p {
     font-size: 1.2em;
     margin-top: 0;
     opacity: 0.9;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Sombreado para el texto blanco */
 }
 
 /* Nuevo estilo para el eslogan en el encabezado */
@@ -55,16 +52,16 @@ header .slogan {
     font-family: 'Roboto', sans-serif;
     font-size: 1.4em;
     font-weight: 700;
-    color: var(--accent-color); /* Amarillo brillante original */
+    color: var(--accent-color); /* Amarillo brillante */
     letter-spacing: 2px;
     margin-top: 1em;
     text-transform: uppercase;
-    text-shadow: 1px 1px 3px #000000; /* Sombra negra para el eslogan */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
 }
 
 /* Navegación */
 nav {
-    background-color: var(--background-dark); /* Tu color oscuro original */
+    background-color: var(--background-dark); /* Color de fondo para la navegación (púrpura medio) */
     padding: 1em 0;
     text-align: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -80,18 +77,18 @@ nav ul {
 }
 
 nav a {
-    color: var(--light-text-color); /* Texto claro original */
+    color: var(--light-text-color); /* Color de letra blanco */
     text-decoration: none;
     font-weight: bold;
     font-size: 1.1em;
     padding: 0.5em 1em;
     transition: background-color 0.3s ease, color 0.3s ease;
     border-radius: 5px;
-    text-shadow: 1px 1px 2px #000000; /* Sombra negra para los enlaces de navegación */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Sombreado para el texto blanco de la navegación */
 }
 
 nav a:hover, nav a:focus {
-    background-color: var(--primary-color); /* Rojo Coral original */
+    background-color: var(--primary-color); /* Fucsia vibrante al pasar el ratón */
     color: white;
 }
 
@@ -105,21 +102,23 @@ section {
 h2 {
     font-family: 'Pacifico', cursive;
     font-size: 2.8em;
-    color: var(--primary-color); /* Rojo Coral original */
+    color: var(--primary-color); /* Títulos principales con el fucsia vibrante */
     margin-bottom: 1em;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Sombra para los títulos */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 /* Hero Section */
 #hero {
-    /* Reemplaza con una imagen de fondo atractiva, si no tienes una, placeholder es útil */
-    background: url('https://via.placeholder.com/1500x600/4ECDC4/FFFFFF?text=Granizada+Refrescante') no-repeat center center/cover; /* Tu imagen original */
-    color: var(--light-text-color); /* Texto claro original */
+    /* Aquí el fondo puede ser tu imagen o un color sólido.
+       Si usas una imagen, el text-shadow es muy importante para la legibilidad.
+       Si prefieres que también sea fucsia, puedes cambiar la URL. */
+    background: url('https://via.placeholder.com/1500x600/FF69B4/FFFFFF?text=Granizada+Refrescante') no-repeat center center/cover; /* Imagen de placeholder fucsia vibrante */
+    color: var(--light-text-color); /* Texto blanco */
     padding: 8em 5%;
     display: flex;
     align-items: center;
     justify-content: center;
-    text-shadow: 2px 2px 6px #000000; /* Sombra negra más pronunciada para el hero */
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8); /* Sombreado más fuerte para el texto del hero */
 }
 
 .hero-content {
@@ -130,7 +129,7 @@ h2 {
     font-family: 'Pacifico', cursive;
     font-size: 4em;
     margin-bottom: 0.5em;
-    color: var(--accent-color); /* Amarillo brillante original */
+    color: var(--accent-color); /* Amarillo Brillante */
 }
 
 #hero p {
@@ -138,9 +137,9 @@ h2 {
     margin-bottom: 2em;
 }
 
-#orderButton { /* Usé el ID del botón directamente para mayor especificidad */
-    background-color: var(--accent-color); /* Amarillo brillante original */
-    color: var(--primary-color); /* Rojo Coral original */
+#orderButton {
+    background-color: var(--accent-color); /* Amarillo brillante para el botón principal */
+    color: var(--primary-color); /* Texto fucsia vibrante en el botón */
     padding: 1.2em 2.5em;
     border: none;
     border-radius: 50px;
@@ -149,7 +148,6 @@ h2 {
     cursor: pointer;
     transition: transform 0.3s ease, background-color 0.3s ease;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    text-shadow: 1px 1px 2px #000000; /* Sombra para el texto del botón */
 }
 
 #orderButton:hover {
@@ -157,19 +155,16 @@ h2 {
     background-color: #FFD700; /* Un amarillo ligeramente más oscuro al pasar el ratón */
 }
 
-/* ELIMINADOS: .flavor-gallery, .slogan-secondary, .flavor-grid, .flavor-card, .price-list-container, .price-list, .call-to-action-prices */
-
 
 /* Customize Section */
 .customize-section {
-    background: linear-gradient(to right, var(--secondary-color), var(--primary-color)); /* Tus colores originales */
-    color: var(--light-text-color); /* Texto claro original */
+    background: linear-gradient(to right, var(--secondary-color), var(--primary-color)); /* Mantiene el degradado, usando fucsia vibrante */
+    color: var(--light-text-color); /* Texto blanco para esta sección */
     padding: 5em 5%;
-    text-shadow: 1px 1px 3px #000000; /* Sombra para el texto de la sección */
 }
 
 .customize-section h2 {
-    color: var(--accent-color); /* Amarillo brillante original */
+    color: var(--accent-color); /* Título de sección con amarillo brillante */
 }
 
 .customize-options {
@@ -181,9 +176,311 @@ h2 {
 }
 
 .option-group {
-    background-color: rgba(255, 255, 255, 0.95);
+    background-color: rgba(255, 255, 255, 0.95); /* Fondo blanco semitransparente para los grupos de opciones */
     padding: 2.5em;
     border-radius: 15px;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
     text-align: left;
+    color: var(--text-color); /* Texto oscuro para contraste en el fondo claro */
+    flex: 1;
+    min-width: 280px;
+    max-width: 400px;
+}
+
+.option-group h3 {
+    font-family: 'Pacifico', cursive;
+    color: var(--primary-color); /* Títulos de grupo con fucsia vibrante */
+    font-size: 1.6em;
+    margin-bottom: 1em;
+}
+
+/* Espacio entre los párrafos de bases y los selectores */
+.option-group p {
+    margin-bottom: 0.5em;
+    margin-top: 1em;
     color: var(--text-color);
+    font-weight: bold;
+}
+
+.option-group p:first-of-type {
+    margin-top: 0;
+}
+
+
+/* Selector de tamaño y base */
+.option-group select {
+    width: 100%;
+    padding: 0.8em;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background-color: #fefefe;
+    appearance: none;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23000000%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13%205.7L146.2%20202.7%2018.6%2075.1a17.6%2017.6%200%200%200-25.3%2023.3l137.9%20138c3.2%203.2%207.1%204.7%2011.1%204.7s7.9-1.5%2011.1-4.7l137.9-138c18.4-18.4%205-47.8-23.3-47.8z%22%2F%3E%3C%2Fsvg%3E');
+    background-repeat: no-repeat;
+    background-position: right 0.7em top 50%, 0 0;
+    background-size: 0.65em auto, 100%;
+}
+
+
+/* --- ESTILOS MEJORADOS PARA CHECKBOXES --- */
+.option-group input[type="checkbox"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    border: 2px solid var(--primary-color); /* Borde con fucsia vibrante */
+    border-radius: 5px;
+    background-color: white;
+    cursor: pointer;
+    vertical-align: middle;
+    margin-right: 0.8em;
+    position: relative;
+    flex-shrink: 0;
+    outline: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.option-group input[type="checkbox"]:checked {
+    background-color: var(--primary-color); /* Relleno con fucsia vibrante */
+    border-color: var(--primary-color);
+}
+
+.option-group input[type="checkbox"]:checked::after {
+    content: '✔';
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 1;
+}
+
+.option-group input[type="checkbox"] + label {
+    display: inline-flex;
+    align-items: center;
+    font-size: 1.1em;
+    color: var(--text-color);
+    cursor: pointer;
+    margin-bottom: 0.8em;
+    padding-left: 0.5em;
+    white-space: nowrap;
+}
+
+.topping-options-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 1em;
+    margin-top: 1em;
+}
+
+.free-toppings {
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+/* --- FIN ESTILOS MEJORADOS PARA CHECKBOXES --- */
+
+
+#customSummary {
+    margin-top: 1.5em;
+    font-size: 1.3em;
+    font-weight: bold;
+    color: var(--primary-color); /* Fucsia vibrante para el resumen */
+    background-color: var(--accent-color);
+    padding: 1em;
+    border-radius: 10px;
+}
+
+/* Estilo para el precio final */
+.final-price {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: var(--secondary-color);
+    margin-top: 1em;
+}
+
+#granizadaPrice {
+    font-family: 'Pacifico', cursive;
+    font-size: 1.2em;
+    color: var(--primary-color); /* Fucsia vibrante para el valor del precio */
+}
+
+.price-note {
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 0.5em;
+}
+
+/* Botones de personalización */
+#addToCartButton {
+    background-color: var(--secondary-color); /* Turquesa para añadir al carrito */
+    color: white; /* Texto blanco */
+    padding: 1.2em 2.5em;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.3em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    margin-top: 2em;
+    display: inline-block;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6); /* Sombreado para el texto blanco del botón */
+}
+
+#addToCartButton:hover {
+    transform: translateY(-5px) scale(1.05);
+    background-color: #38A39E; /* Un turquesa más oscuro */
+}
+
+
+/* --- ESTILOS DEL CARRITO DE COMPRAS --- */
+.cart-section {
+    background-color: var(--background-light); /* Fondo de la sección del carrito con fucsia suave */
+    padding: 4em 5%;
+}
+
+.cart-section h2 {
+    color: var(--primary-color); /* Título del carrito con fucsia vibrante */
+}
+
+#cartItems {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    padding: 2em;
+    margin: 2em auto;
+    max-width: 800px;
+    text-align: left;
+    min-height: 100px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 0;
+    border-bottom: 1px dashed #eee;
+    color: var(--text-color);
+}
+
+.cart-item:last-child {
+    border-bottom: none;
+}
+
+.item-details {
+    flex-grow: 1;
+    font-size: 1.1em;
+}
+
+.item-details .price {
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+
+.remove-item-button {
+    background-color: #ff4d4d;
+    color: white; /* Texto blanco */
+    border: none;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 0.9em;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5); /* Sombreado para el texto blanco del botón */
+}
+
+.remove-item-button:hover {
+    background-color: #cc0000;
+}
+
+.cart-summary {
+    max-width: 800px;
+    margin: 1em auto;
+    text-align: right;
+    padding-right: 1em;
+}
+
+.total-cart-price {
+    font-size: 2em;
+    font-weight: bold;
+    color: var(--primary-color); /* Precio total con fucsia vibrante */
+}
+
+#cartTotalPrice {
+    font-family: 'Pacifico', cursive;
+    color: var(--secondary-color);
+}
+
+.cart-actions {
+    margin-top: 2em;
+    display: flex;
+    justify-content: center;
+    gap: 1.5em;
+    flex-wrap: wrap;
+}
+
+.cart-actions button {
+    padding: 1.2em 2.5em;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.3em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+#clearCartButton {
+    background-color: #ccc;
+    color: var(--text-color);
+}
+
+#clearCartButton:hover {
+    transform: translateY(-5px) scale(1.05);
+    background-color: #aaa;
+}
+
+#placeOrderWhatsApp {
+    background-color: #25D366; /* Verde WhatsApp */
+    color: white; /* Texto blanco */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6); /* Sombreado para el texto blanco del botón */
+}
+
+#placeOrderWhatsApp:hover {
+    transform: translateY(-5px) scale(1.05);
+    background-color: #1DA851;
+}
+
+
+/* Footer */
+footer {
+    background-color: var(--background-dark); /* Color de fondo del footer (púrpura medio) */
+    color: var(--light-text-color); /* Texto blanco */
+    text-align: center;
+    padding: 2em 0;
+    font-size: 0.9em;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Sombreado para el texto del footer */
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Animaciones ajustadas solo a las secciones existentes */
+.customize-section, .cart-section {
+    animation: fadeIn 0.8s ease-out backwards;
+}
+
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.8em;
