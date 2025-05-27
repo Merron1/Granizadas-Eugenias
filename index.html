@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Granizadas Eugenias</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>¡Granizadas Eugenias!</h1>
+        <p>Tu dosis perfecta de frescura y sabor</p>
+        <p class="slogan">100% PURA FRUTA</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#personaliza">Crea la Tuya</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="hero">
+            <div class="hero-content">
+                <h2>El paraíso de las granizadas te espera</h2>
+                <p>Descubre combinaciones únicas y refrescantes que te harán volver por más.</p>
+                <button id="orderButton">Pide Aquí</button>
+            </div>
+        </section>
+
+        <section id="personaliza" class="customize-section">
+            <h2>¡Crea tu Granizada Perfecta!</h2>
+            <div class="customize-options">
+                <div class="option-group">
+                    <h3>1. Elige tus Bases</h3>
+                    <p>Sabor 1:</p>
+                    <select id="baseSelect1">
+                        <option value="mora">Mora</option>
+                        <option value="fresa">Fresa</option>
+                        <option value="mango">Mango</option>
+                        <option value="camote">Camote</option>
+                        <option value="limon">Limón</option>
+                        <option value="salada">Salada</option>
+                        <option value="hawaiiana">Hawaiiana</option>
+                        <option value="tamarindo">Tamarindo</option>
+                        <option value="piña">Piña</option>
+                    </select>
+                    <p style="margin-top: 1em;">Sabor 2 (Opcional):</p>
+                    <select id="baseSelect2">
+                        <option value="ninguna">Ninguna</option>
+                        <option value="mora">Mora</option>
+                        <option value="fresa">Fresa</option>
+                        <option value="mango">Mango</option>
+                        <option value="camote">Camote</option>
+                        <option value="limon">Limón</option>
+                        <option value="tamarindo">Tamarindo</option>
+                        <option value="piña">Piña</option>
+                    </select>
+                </div>
+
+                <div class="option-group">
+                    <h3>2. Elige el Tamaño</h3>
+                    <select id="sizeSelect">
+                        <option value="12oz">12 oz. (Q10)</option>
+                        <option value="16oz">16 oz. (Q12)</option>
+                    </select>
+                </div>
+
+                <div class="option-group">
+                    <h3>3. Añade Toppings (Q2 c/u)</h3>
+                    <div class="topping-options-grid">
+                        <input type="checkbox" id="toppingMora" value="Mora">
+                        <label for="toppingMora">Mora</label>
+                        <input type="checkbox" id="toppingFresa" value="Fresa">
+                        <label for="toppingFresa">Fresa</label>
+                        <input type="checkbox" id="toppingMango" value="Mango">
+                        <label for="toppingMango">Mango</label>
+                        <input type="checkbox" id="toppingCamote" value="Camote">
+                        <label for="toppingCamote">Camote</label>
+                        <input type="checkbox" id="toppingLimon" value="Limón">
+                        <label for="toppingLimon">Limón</label>
+                        <input type="checkbox" id="toppingTamarindo" value="Tamarindo">
+                        <label for="toppingTamarindo">Tamarindo</label>
+                        <input type="checkbox" id="toppingPina" value="Piña">
+                        <label for="toppingPina">Piña</label>
+
+                        <input type="checkbox" id="toppingChamoy" value="Chamoy">
+                        <label for="toppingChamoy">Chamoy</label>
+                        <input type="checkbox" id="toppingTajin" value="Tajín">
+                        <label for="toppingTajin">Tajín</label>
+                        <input type="checkbox" id="toppingLecheCondensada" value="Leche Condensada">
+                        <label for="toppingLecheCondensada">Leche Condensada</label>
+                        <input type="checkbox" id="toppingJugoV8" value="Jugo V8">
+                        <label for="toppingJugoV8">Jugo V8</label>
+                    </div>
+                </div>
+                <div class="option-group">
+                    <h3>4. Tu Granizada:</h3>
+                    <p id="customSummary">Elige tus opciones para ver tu granizada aquí.</p>
+                    <p class="final-price">Precio Total: <span id="granizadaPrice">Q10.00</span></p>
+                    <p class="price-note">Todos los toppings tienen un costo adicional de Q2 c/u.</p>
+                </div>
+            </div>
+            <button id="addToCartButton">Añadir al Carrito</button>
+        </section>
+
+        <section id="carrito" class="cart-section">
+            <h2>Tu Pedido</h2>
+            <div id="cartItems">
+                <p>Tu carrito está vacío.</p>
+            </div>
+            <div class="cart-summary">
+                <p class="total-cart-price">Total del Pedido: <span id="cartTotalPrice">Q0.00</span></p>
+            </div>
+            <div class="cart-actions">
+                <button id="clearCartButton">Vaciar Carrito</button>
+                <button id="placeOrderWhatsApp">Hacer Pedido por WhatsApp</button>
+            </div>
+        </section>
+
+        </main>
+
+    <footer>
+        <p>&copy; 2025 Granizadas Eugenias. Todos los derechos reservados.</p>
+        <p>Pedidos y Consultas: <strong>3692-2955</strong></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

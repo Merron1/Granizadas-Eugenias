@@ -1,0 +1,565 @@
+/* Importar fuentes de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@300;400;700&display=swap');
+
+:root {
+    --primary-color: #FF6B6B; /* Rojo Coral */
+    --secondary-color: #4ECDC4; /* Turquesa */
+    --accent-color: #FFE66D; /* Amarillo Brillante */
+    --text-color: #333;
+    --light-text-color: #f4f4f4;
+    --background-light: #f9f9f9;
+    --background-dark: #333;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-light);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Encabezado */
+header {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--light-text-color);
+    padding: 2.5em 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 3.5em;
+    margin-bottom: 0.2em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+header p {
+    font-size: 1.2em;
+    margin-top: 0;
+    opacity: 0.9;
+}
+
+/* Nuevo estilo para el eslogan en el encabezado */
+header .slogan {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.4em;
+    font-weight: 700;
+    color: var(--accent-color); /* Amarillo brillante */
+    letter-spacing: 2px;
+    margin-top: 1em;
+    text-transform: uppercase;
+}
+
+/* Navegación */
+nav {
+    background-color: var(--background-dark);
+    padding: 1em 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+}
+
+nav a {
+    color: var(--light-text-color);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    padding: 0.5em 1em;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 5px;
+}
+
+nav a:hover, nav a:focus {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Secciones generales */
+section {
+    padding: 4em 5%;
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+h2 {
+    font-family: 'Pacifico', cursive;
+    font-size: 2.8em;
+    color: var(--primary-color);
+    margin-bottom: 1em;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Hero Section */
+#hero {
+    /* Reemplaza con una imagen de fondo atractiva, si no tienes una, placeholder es útil */
+    background: url('https://via.placeholder.com/1500x600/4ECDC4/FFFFFF?text=Granizada+Refrescante') no-repeat center center/cover;
+    color: var(--light-text-color);
+    padding: 8em 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+#hero h2 {
+    font-family: 'Pacifico', cursive;
+    font-size: 4em;
+    margin-bottom: 0.5em;
+    color: var(--accent-color);
+}
+
+#hero p {
+    font-size: 1.5em;
+    margin-bottom: 2em;
+}
+
+#orderButton { /* Usé el ID del botón directamente para mayor especificidad */
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    padding: 1.2em 2.5em;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.3em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+#orderButton:hover {
+    transform: translateY(-5px) scale(1.05);
+    background-color: #FFD700; /* Un amarillo ligeramente más oscuro al pasar el ratón */
+}
+
+/* ELIMINADOS: .flavor-gallery, .slogan-secondary, .flavor-grid, .flavor-card, .price-list-container, .price-list, .call-to-action-prices */
+
+
+/* Customize Section */
+.customize-section {
+    background: linear-gradient(to right, var(--secondary-color), var(--primary-color));
+    color: var(--light-text-color);
+    padding: 5em 5%;
+}
+
+.customize-section h2 {
+    color: var(--accent-color);
+}
+
+.customize-options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3em;
+    margin-top: 3em;
+}
+
+.option-group {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 2.5em;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    color: var(--text-color);
+    flex: 1;
+    min-width: 280px;
+    max-width: 400px;
+}
+
+.option-group h3 {
+    font-family: 'Pacifico', cursive;
+    color: var(--primary-color);
+    font-size: 1.6em;
+    margin-bottom: 1em;
+}
+
+/* Espacio entre los párrafos de bases y los selectores */
+.option-group p {
+    margin-bottom: 0.5em;
+    margin-top: 1em; /* Ajustado para la segunda base */
+    color: var(--text-color); /* Asegura que el texto sea visible */
+    font-weight: bold;
+}
+
+.option-group p:first-of-type {
+    margin-top: 0; /* Resetea el margen superior del primer párrafo */
+}
+
+
+/* Selector de tamaño y base */
+.option-group select {
+    width: 100%;
+    padding: 0.8em;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background-color: #fefefe;
+    appearance: none; /* Eliminar el estilo por defecto del select */
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23000000%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13%205.7L146.2%20202.7%2018.6%2075.1a17.6%2017.6%200%200%200-25.3%2023.3l137.9%20138c3.2%203.2%207.1%204.7%2011.1%204.7s7.9-1.5%2011.1-4.7l137.9-138c18.4-18.4%205-47.8-23.3-47.8z%22%2F%3E%3C%2Fsvg%3E');
+    background-repeat: no-repeat;
+    background-position: right 0.7em top 50%, 0 0;
+    background-size: 0.65em auto, 100%;
+}
+
+
+/* --- ESTILOS MEJORADOS PARA CHECKBOXES --- */
+
+/* Estilos base para todos los checkboxes en los grupos de opciones */
+.option-group input[type="checkbox"] {
+    /* Reset de apariencia del navegador */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    /* Dimensiones y visualización del cuadrado */
+    width: 24px; /* Un poco más grandes para mejor clic y visibilidad */
+    height: 24px;
+    border: 2px solid var(--primary-color); /* Color del borde del checkbox */
+    border-radius: 5px; /* Bordes ligeramente redondeados */
+    background-color: white; /* Fondo del cuadrado */
+    cursor: pointer;
+    vertical-align: middle; /* Alinea con el texto del label */
+    margin-right: 0.8em; /* Espacio a la derecha del checkbox */
+    position: relative; /* Necesario para posicionar el checkmark */
+    flex-shrink: 0; /* Evita que el checkbox se encoja en flexbox */
+    outline: none; /* Elimina el contorno al hacer focus, si no quieres */
+    transition: all 0.2s ease-in-out; /* Transición suave para los cambios visuales */
+}
+
+/* Estilo cuando el checkbox está marcado */
+.option-group input[type="checkbox"]:checked {
+    background-color: var(--primary-color); /* Fondo cuando marcado */
+    border-color: var(--primary-color); /* Borde cuando marcado */
+}
+
+/* El 'checkmark' visual dentro del checkbox */
+.option-group input[type="checkbox"]:checked::after {
+    content: '✔'; /* Símbolo de verificación Unicode */
+    font-family: 'Roboto', sans-serif; /* Asegura que la fuente cargue el símbolo */
+    color: white; /* Color del símbolo */
+    font-size: 16px; /* Tamaño del símbolo */
+    font-weight: bold; /* Para que el símbolo se vea más claro */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centra el símbolo perfectamente */
+    line-height: 1; /* Evita espacio extra vertical */
+}
+
+/* Estilos para el label asociado al checkbox */
+.option-group input[type="checkbox"] + label {
+    display: inline-flex; /* Usa flexbox para alinear el checkbox y el texto */
+    align-items: center; /* Centra verticalmente el contenido */
+    font-size: 1.1em; /* Un poco más grande para mejor legibilidad */
+    color: var(--text-color); /* Color del texto del label */
+    cursor: pointer;
+    margin-bottom: 0.8em; /* Espacio entre los elementos de la lista */
+    padding-left: 0.5em; /* Pequeño padding si necesitas más espacio */
+    white-space: nowrap; /* Evita que el texto del label se rompa en varias líneas */
+}
+
+/* Ajustes para el contenedor de la cuadrícula de toppings */
+.topping-options-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); /* Ajustado min-width */
+    gap: 1em; /* Un poco más de espacio */
+    margin-top: 1em;
+}
+
+/* Estilo para el texto de toppings gratis (AHORA SERÁ "Q2 c/u" en HTML) */
+.free-toppings { /* Se mantiene la clase por si se usa en otro lugar o para futuras modificaciones */
+    color: var(--secondary-color); /* Turquesa */
+    font-weight: bold;
+}
+
+/* --- FIN ESTILOS MEJORADOS PARA CHECKBOXES --- */
+
+
+#customSummary {
+    margin-top: 1.5em;
+    font-size: 1.3em;
+    font-weight: bold;
+    color: var(--primary-color);
+    background-color: var(--accent-color);
+    padding: 1em;
+    border-radius: 10px;
+}
+
+/* Estilo para el precio final */
+.final-price {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: var(--secondary-color); /* Turquesa para el precio */
+    margin-top: 1em;
+}
+
+#granizadaPrice {
+    font-family: 'Pacifico', cursive; /* Para que el precio destaque */
+    font-size: 1.2em;
+    color: var(--primary-color); /* Rojo Coral para el valor numérico */
+}
+
+.price-note {
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 0.5em;
+}
+
+/* Botones de personalización */
+#addToCartButton { /* Nuevo botón para añadir al carrito */
+    background-color: var(--secondary-color); /* Color diferente para destacar */
+    color: white;
+    padding: 1.2em 2.5em;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.3em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    margin-top: 2em;
+    display: inline-block;
+}
+
+#addToCartButton:hover {
+    transform: translateY(-5px) scale(1.05);
+    background-color: #38A39E; /* Un turquesa más oscuro */
+}
+
+
+/* --- ESTILOS DEL CARRITO DE COMPRAS --- */
+.cart-section {
+    background-color: var(--background-light);
+    padding: 4em 5%;
+}
+
+.cart-section h2 {
+    color: var(--primary-color); /* Mismo color que otros títulos de sección */
+}
+
+#cartItems {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    padding: 2em;
+    margin: 2em auto;
+    max-width: 800px;
+    text-align: left;
+    min-height: 100px; /* Para que no se vea vacío cuando no hay elementos */
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 0;
+    border-bottom: 1px dashed #eee;
+    color: var(--text-color);
+}
+
+.cart-item:last-child {
+    border-bottom: none;
+}
+
+.item-details {
+    flex-grow: 1;
+    font-size: 1.1em;
+}
+
+.item-details .price {
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+
+.remove-item-button {
+    background-color: #ff4d4d; /* Rojo para eliminar */
+    color: white;
+    border: none;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 0.9em;
+}
+
+.remove-item-button:hover {
+    background-color: #cc0000;
+}
+
+.cart-summary {
+    max-width: 800px;
+    margin: 1em auto;
+    text-align: right;
+    padding-right: 1em;
+}
+
+.total-cart-price {
+    font-size: 2em;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+#cartTotalPrice {
+    font-family: 'Pacifico', cursive;
+    color: var(--secondary-color); /* Turquesa para el total del carrito */
+}
+
+.cart-actions {
+    margin-top: 2em;
+    display: flex;
+    justify-content: center;
+    gap: 1.5em;
+    flex-wrap: wrap; /* Para que los botones se envuelvan en pantallas pequeñas */
+}
+
+.cart-actions button {
+    padding: 1.2em 2.5em;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.3em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+#clearCartButton {
+    background-color: #ccc; /* Gris para vaciar */
+    color: var(--text-color);
+}
+
+#clearCartButton:hover {
+    transform: translateY(-5px) scale(1.05);
+    background-color: #aaa;
+}
+
+#placeOrderWhatsApp {
+    background-color: #25D366; /* Verde WhatsApp */
+    color: white;
+}
+
+#placeOrderWhatsApp:hover {
+    transform: translateY(-5px) scale(1.05);
+    background-color: #1DA851; /* Un verde más oscuro */
+}
+
+
+/* ELIMINADOS: .contact-section */
+
+
+/* Footer */
+footer {
+    background-color: var(--background-dark);
+    color: var(--light-text-color);
+    text-align: center;
+    padding: 2em 0;
+    font-size: 0.9em;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Animaciones ajustadas solo a las secciones existentes */
+.customize-section, .cart-section { /* Añadido .cart-section para animación */
+    animation: fadeIn 0.8s ease-out backwards;
+}
+
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.8em;
+    }
+
+    #hero h2 {
+        font-size: 3em;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0.5em;
+    }
+
+    nav a {
+        padding: 0.8em;
+    }
+
+    .customize-options {
+        grid-template-columns: 1fr;
+    }
+
+    .option-group {
+        width: 90%;
+        max-width: none;
+    }
+
+    .cart-actions {
+        flex-direction: column;
+    }
+
+    .cart-actions button {
+        width: calc(100% - 2em); /* Para que ocupen casi todo el ancho */
+        margin: 0.5em auto; /* Centrar y dar espacio */
+    }
+
+    .cart-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5em;
+    }
+
+    .item-details .price {
+        margin-top: 0.5em;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2.2em;
+    }
+
+    header p {
+        font-size: 1em;
+    }
+
+    #hero h2 {
+        font-size: 2.5em;
+    }
+
+    #hero p {
+        font-size: 1.2em;
+    }
+
+    #orderButton, #addToCartButton, #clearCartButton, #placeOrderWhatsApp {
+        padding: 1em 2em;
+        font-size: 1.1em;
+        display: block;
+        width: calc(100% - 2em);
+        margin: 1em auto;
+    }
+
+    section {
+        padding: 3em 5%;
+    }
+
+    .total-cart-price {
+        font-size: 1.5em;
+    }
+}
